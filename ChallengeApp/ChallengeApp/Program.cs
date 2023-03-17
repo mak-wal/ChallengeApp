@@ -1,48 +1,60 @@
-﻿//------Rozwiązanie nr1-----
-Console.WriteLine("ile jakic cyfr w liczbie:");
-long number = 453212129999999999;
-string NumberInString = number.ToString();
-char[] letters = NumberInString.ToArray();
+﻿//int n = 3;
 
-int[] ile = new int[10];
+//int[] grades = new int[n];
+//for (int i = 0; i < grades.Length; i++)
+////gdy używam tablicy mogę tylko użyć length z uwagi na zapis []
+//{
+//    grades[i] = i + 10;
+//    Console.WriteLine(grades[i]);
+//}
+//List<string> tydzien = new List<string>();
 
-Console.WriteLine(NumberInString);
+//tydzien.Add("poniedziałek");
+//tydzien.Add("wtorek");
+//tydzien.Add("środa");
 
-for (int i = 0; i < letters.Length; i++)
-{
-    if (letters[i] == 0)
-        ile[0] = ile[0] + 1;
-    else if (letters[i] == '1')
-        ile[1] = ile[1] + 1;
-    else if (letters[i] == '2')
-        ile[2] = ile[2] + 1;
-    else if (letters[i] == '3')
-        ile[3] = ile[3] + 1;
-    else if (letters[i] == '4')
-        ile[4] = ile[4] + 1;
-    else if (letters[i] == '5')
-        ile[5] = ile[5] + 1;
-    else if (letters[i] == '6')
-        ile[6] = ile[6] + 1;
-    else if (letters[i] == '7')
-        ile[7] = ile[7] + 1;
-    else if (letters[i] == '8')
-        ile[8] = ile[8] + 1;
-    else if (letters[i] == '9')
-        ile[9] = ile[9] + 1;
-}
+//Console.WriteLine("metoda z for");
+//Console.WriteLine("");
+////gdy używam listy mogę użyć Count (z uwagi na użycie .Add)
+////za pomocą .Add dodaje na końcu listy kolejną wartość
+//for (int i = 0; i < tydzien.Count; i++)
+//{
+//    Console.WriteLine(tydzien[i]);
+//}
+//Console.WriteLine("metoda z for each");
+//Console.WriteLine("");
 
-int numeracja = 0;
-foreach (int tyle in ile)
-{
-    Console.Write(numeracja);
-    Console.Write(". ");
+//foreach (string dzien in tydzien)
+//{
+//    Console.WriteLine(dzien);
+//}
 
-    Console.WriteLine(tyle);
-    numeracja++;
-}
+//COŚ nie działa
+
+//List<string> innytydzien = new List<string>();
+//innytydzien[0] = "czwartek";
+//innytydzien[1] = "piątek";
+//innytydzien[2] = "sobota";
 
 
+//for (int i = 0; i < innytydzien.Count; i++)
+//{
+//    Console.WriteLine(innytydzien[i]);
+//}
 
+using ChallengeApp;
 
+User user1 = new User("Adam", "568waf");
+User user2 = new User("Marysia", "asd245");
+User user3 = new User("Zuzia", "a8f333");
+User user4 = new User("Damian", "gsd8w2");
+
+string imie = user1.Login;
+
+user2.AddScore(3);
+user2.AddScore(6);
+
+int result = user2.Result; //odwołanie się do obiektu (user2)
+Console.WriteLine(result);
+string GameName = User.nazwa_gry;//odwołonie się do zmiennej statycznej (User)
 
