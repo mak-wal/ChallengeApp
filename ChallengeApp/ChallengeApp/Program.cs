@@ -1,8 +1,10 @@
 ﻿using ChallengeApp;
 Employee employee = new Employee("Justyna", "Skowrońska");
-employee.AddGrade(2);
 employee.AddGrade(5);
-employee.AddGrade(6);
+employee.AddGrade("2");
+employee.AddGrade("duplo");
+employee.AddGrade("221");
+employee.AddGrade(10);
 var statistics = employee.GetStatistics();
 
 Console.WriteLine("wartość minimalna: "+statistics.Min);
